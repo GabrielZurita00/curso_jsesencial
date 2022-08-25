@@ -5,84 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
+        h1{
+            border-top: 2px solid #ccc;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            box-shadow: 5px 5px 5px #ccc;
+            padding: 10px;
+        }
+        button{
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            border-radius: 5px;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            background-color: steelblue;
+        }
+        #mensajes{
+            width: 90%;
+            height: 50px;
+            margin: 0 auto;
+            background-color: lightcoral;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+        }
+        .hide{
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <h1 class="title">Lorem ipsum</h1>
-    <button id="boton">¡Púlsame!</button>
-    <div id="container">
-        <p class="principal">
-            Párrafo 1 <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Et odio pellentesque diam volutpat. Sit amet 
-            facilisis magna etiam tempor orci eu. Convallis posuere morbi leo urna. Turpis in eu mi bibendum.
-            Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Imperdiet dui accumsan 
-            sit amet nulla. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Pharetra vel 
-            turpis nunc eget lorem. Sed velit dignissim sodales ut eu sem. Sed velit dignissim sodales ut.
-        </p>
-        <!--p>
-            Párrafo 2 <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Et odio pellentesque diam volutpat. Sit amet 
-            facilisis magna etiam tempor orci eu. Convallis posuere morbi leo urna. Turpis in eu mi bibendum.
-            Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Imperdiet dui accumsan 
-            sit amet nulla. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Pharetra vel 
-            turpis nunc eget lorem. Sed velit dignissim sodales ut eu sem. Sed velit dignissim sodales ut.
-        </p>
-        <p>
-            Párrafo 3 <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Et odio pellentesque diam volutpat. Sit amet 
-            facilisis magna etiam tempor orci eu. Convallis posuere morbi leo urna. Turpis in eu mi bibendum.
-            Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Imperdiet dui accumsan 
-            sit amet nulla. Et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut. Pharetra vel 
-            turpis nunc eget lorem. Sed velit dignissim sodales ut eu sem. Sed velit dignissim sodales ut.
-        </p!-->
+    <button id="boton">Traer datos</button>
+    <div id="mensajes" class="hide"></div>
+    <h1>Banderas</h1>
+    <div id="banderas">
+
     </div>
-   <!--script>
-    //Métodos y propiedades del DOM
-    var boton = document.getElementById("boton");
+    <hr>
+    <h1>POSTS</h1>
+    <div id ="contenedor">
 
-    var todosLosParrafos= document.getElementsByTagName('p');
-    var parrafoPorClase= document.getElementsByClassName('principal')[0].textContent;
-    
-    var foto = document.createElement('img');
-    foto.src = "resources/img.png"
-    foto.name = "img1";
-    foto.width= 400;
-    document.body.appendChild(foto);
-
-    foto.addEventListener('click', function(){
-        if (this.name === 'img1'){
-            this.src = 'resources/michi grosero.png';
-            this.name = 'img2';
-        } else {
-            this.src = "resources/img.png"
-            this.name = 'img1';
-        }
-    })
-
-    boton.addEventListener('click', function(){
-        boton.style.backgroundColor = "green";
-        boton.style.color = "white";
-        boton.style.width = "200px";
-    })
-   </script!-->
-   <script>
-    //Métodos y propiedades del BOM
-    var boton = document.getElementById('boton');
-    var principal = document.getElementsByClassName('principal')[0];
-   
-    localStorage.setItem('contenido','Código y café es una gran combinación');
-    
-
-    boton.addEventListener('click', function(){
-        //console.log('innerHeigth: ', window.innerHeight);
-        //console.log('innerWidth: ', window.innerWidth);
-        var contenido = localStorage.getItem('contenido');
-        principal.innerHTML = contenido;
-
-        //window.history.forward();
-        //window.history.back();
-        //window.history.go(3);
-    })
-   </script>
+    </div>
+   <script src="js/remoto.js"></script>
 </body>
 </html>
