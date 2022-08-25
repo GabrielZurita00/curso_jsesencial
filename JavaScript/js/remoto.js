@@ -46,7 +46,7 @@ boton.addEventListener('click', function(){
 });
 
 function getPosts(){
-    return fetch('https://jsonplaceholder.typicode.comm/posts');
+    return fetch('https://jsonplaceholder.typicode.com/posts');
 }
 
 function getCountries(){
@@ -65,7 +65,11 @@ function mostrarBanderas(countries){
 }
 
 function mostrarDatos(posts){
+    contBanderas.innerHTML = '';
     posts.map((post, i) => {
+
+        debugger;
+
         let titulo = document.createElement ('h1');
         let contenido = document.createElement('p');    
 
